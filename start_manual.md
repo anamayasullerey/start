@@ -65,7 +65,7 @@ y = net.predict_classify(x) # Returns the index for classification based outputs
 status = net.check_gradient(x, y) # Returns boolean. Numerically checks the gradient calculations.
 net.print_state() # prints the activation, derivatives and parameters for each layer
 ```
-## 2. layers
+## 2. Layers
 Layers in *Start* is a entity that specifies forward propagation and backward propagation methods. Every layer stores activations and corresponding input derivatives (dactivations). The layers are stored in two layer dictionaries, one for hidden layers (hdict) and one for output layers (ldict). Layer dictionaries are imported by the following statement.
 ```
     import start.layer_dict as ld
