@@ -130,21 +130,18 @@ Following code generates the weight update parametrs for gradient descent.
 ``` 
 # defaults : learning_rate = 0.5
 weight_update_params = wup.GradientDescentParams(learning_rate)
-
 ```
 ### 3.2 Momentum
 Following code generates the weight update parametrs for momentum method.
 ```
 # defaults : learning_rate = 0.2, beta = 0.9
 weight_update_params = wup.MomentumParams(learning_rate, beta)
-
 ```
 ### 3.3 Adam
 Following code generates the weight update parametrs for Adam.
 ```
 # defaults : learning_rate = 0.2, beta1 = 0.9, beta2 = 0.999, epsilon=1e-8
 weight_update_params = wup.AdamParams(learning_rate, beta1, beta2, epsilon)
-
 ```
 
 
