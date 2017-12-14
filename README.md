@@ -1,4 +1,5 @@
-# Introduction
+# *Start* - A beginner's neural net framework
+
 **_Start_** is designed for beginner level AI learners to experiment with neural network concepts. It is inspired by and covers the concepts covered in first three courses of the deep learning specialization by [Prof Andrew Ng](http://www.andrewng.org/ )  ([deeplearning.ai](https://www.deeplearning.ai/)).
 
 # How to *Start*
