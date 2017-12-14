@@ -9,8 +9,8 @@ This class captures architecture of the neural network.
 neural_network module is imported by the following statement.
 ```
 import start.neural_network as nn
-
 ```
+
 ### 1.2 Creating an object
 A neural network object is created by the following statement.
 ```
