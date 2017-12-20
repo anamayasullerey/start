@@ -13,7 +13,7 @@ The documentation on Start explains the featrues of the *Start*. It also covers 
 
 # Modifying *Start*
 ## Architecture of *Start*
-*Start* builds a network as an array of layers. There layers have handles to their previous and next layers. Forward propagation and backward propagation is done as a recursion across the layers. Weight update functionality is separated from the layers. The state for weight update is maintained within the layers.
+*Start* builds a network as an array of layers. These layers have handles to their previous and next layers. Forward propagation and backward propagation is done as a recursion across the layers. Weight update functionality is separated from the layers. The state for weight update is maintained within the layers.
 
 ## Unit testing
 *Start* comes with unit tests. These tests are done on very small scale nets which can be debugged manually. It is **highly recommended** to add unit tests for any new features. The unit tests that come with the framework are divided into two categories.
