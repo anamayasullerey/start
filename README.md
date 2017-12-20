@@ -5,7 +5,7 @@
 # How to *Start*
 After downloading the git repository for *Start*, **"start/src"** directory needs to be added to **$PYTHONPATH**.
 
-## 1. [MNIST digit classifier example](docs/mnist_net.ipynb) 
+## 1. [MNIST digit classifier example](src/mnist/mnist_net.ipynb) 
 MNIST digit classfier example using *Start* gives a feel of the architecture of *Start*. It is recommended to follow the documentation and create a classifier in Jupyter notebook. The example, **mnist_net.py** is also checked in as python module and can be run in a shell.
 
 ## 2. [Start documentation](start_manual.md)
