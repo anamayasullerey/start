@@ -51,7 +51,7 @@ net.check_arch()
 net.set_l2_loss_coeff(.001)
 
 # Define weight update method
-learning_rate = wup.LearningRate(alpha=.3)
+learning_rate = wup.LearningRate(alpha=.3, decay="inverse", k=0.1)
 params = wup.GradientDescentParams(learning_rate)
 # params = wup.MomentumParams(learning_rate)
 # params = wup.AdamParams(learning_rate)
@@ -82,6 +82,8 @@ for epoch in range(1, epochs+1):
         if ((count%100 == 0) and verbose):
             print("Count {0} validation data accuracy = {1} %.".format(count, val_acc()))
             print()
+    
+    learning_rate.update()        
             
         
     print("Epoch {0} validation data accuracy = {1} %.".format(epoch, val_acc()))

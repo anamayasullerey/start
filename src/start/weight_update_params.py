@@ -7,6 +7,7 @@ import numpy as np
 
 class LearningRate(object):
     def __init__(self, alpha = 0.1, decay = "none", k = "0.001"):
+        self.alpha0 = alpha
         self.alpha = alpha
         self.decay = decay
         self.k = k
@@ -19,7 +20,7 @@ class LearningRate(object):
         elif (self.decay == "exp"):
             self.alpha = self.alpha * np.exp(-self.k)
         elif (self.decay == "inverse"):  
-            self.alpha = 1/(1+self.k*self.t)
+            self.alpha = self.alpha0/(1+self.k*self.t)
 
 class GradientDescentParams(object):
     weight_update_func_name = "gradient_descent"

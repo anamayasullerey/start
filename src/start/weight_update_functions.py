@@ -20,7 +20,6 @@ import numpy as np
 def gradient_descent(layer, wu_params):
     for param in layer.parameters:
         layer.__dict__[param] -= wu_params.learning_rate.alpha * layer.__dict__["d" + param]
-    wu_params.learning_rate.update()
 
 def gradient_descent_init(layer):
     pass
@@ -29,7 +28,6 @@ def momentum(layer, wu_params):
     for param in layer.parameters:
         layer.velocity[param] = wu_params.beta*layer.velocity[param] + (1-wu_params.beta)*layer.__dict__["d" + param]
         layer.__dict__[param] -= wu_params.learning_rate.alpha * layer.velocity[param]
-    wu_params.learning_rate.update()
     
 def momentum_init(layer):
     layer.velocity = {}
@@ -55,8 +53,6 @@ def adam(layer, wu_params):
         sq_grad_adj = layer.sq_grad[param] * adj2
 
         layer.__dict__[param] -= wu_params.learning_rate.alpha * weight_velocity_adj/(np.sqrt(sq_grad_adj) + wu_params.epsilon)
-    
-    wu_params.learning_rate.update()
     
     
 def adam_init(layer):
