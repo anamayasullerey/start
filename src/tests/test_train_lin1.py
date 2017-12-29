@@ -18,7 +18,8 @@ class TestTrainLin1(unittest.TestCase):
 
         np.random.seed(1)
 
-        params = wup.GradientDescentParams(.01)
+        learning_rate = wup.LearningRate(alpha=0.1)
+        params = wup.GradientDescentParams(learning_rate)
         net.set_weight_update_function(params)
         net.initialize_parameters()
 

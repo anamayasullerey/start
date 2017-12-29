@@ -26,7 +26,8 @@ class TestTrainSig2(unittest.TestCase):
 
         net.set_l2_loss_coeff(.001)        
 
-        params = wup.GradientDescentParams(.2)
+        learning_rate = wup.LearningRate(alpha=0.2)
+        params = wup.GradientDescentParams(learning_rate)
         net.set_weight_update_function(params)
         net.initialize_parameters()
 

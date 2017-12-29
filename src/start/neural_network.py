@@ -71,10 +71,11 @@ class NeuralNetwork(object):
 
     def predict(self, x):
         self.forward_prop(x)
-        return self.layers[-1].activations
+        return self.layers[-1].get_activations()
 
     def predict_classify(self, x):
-        return np.argmax(self.predict(x), axis=0)
+        self.forward_prop(x)
+        return self.layers[-1].get_labels()
 
     def classification_accuracy(self, x, y_class):
         y_pred = self.predict_classify(x)

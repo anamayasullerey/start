@@ -15,11 +15,7 @@ class test_grad_x1_fc1_ms(nt.NnGradTest):
         self.layer = ld.odict["loss"]("linear_mean_squared_loss")
         self.net.add_layer(self.layer)
 
-        np.random.seed(1)
-
-        self.params = wup.GradientDescentParams(0.1)
-        self.net.set_weight_update_function(self.params)
-        self.net.initialize_parameters()
+    def initialize(self):    
         self.net.layers[1].weights[0,0] = 10
     
     def set_training_example(self):

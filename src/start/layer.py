@@ -15,6 +15,8 @@ o The following rules need to be observed while declaring parameters in any
 o l2_loss_coefficient is assumed generic enough for the purpose of this 
   exercise that it gets a place in the class       
 """
+import numpy as np
+
 class Layer(object):
 
     def __init__(self):
@@ -52,6 +54,12 @@ class Layer(object):
 
     def initialize_parameters(self):
         pass
+
+    def get_activations(self):
+        return self.activations
+
+    def get_labels(self):
+        return np.argmax(self.activations, axis=0)
 
     def print_forward(self):
         print("Layer number: " + str(self.layer_num))

@@ -15,12 +15,6 @@ class test_grad_x3_fc1_sigm1_sigce(nt.NnGradTest):
         self.layer = ld.odict["softmax"](4)
         self.net.add_layer(self.layer)
 
-        np.random.seed(1)
-
-        self.params = wup.GradientDescentParams(0.1)
-        self.net.set_weight_update_function(self.params)
-        self.net.initialize_parameters()
-    
     def set_training_example(self):
         self.x = np.array([[1], [2], [3]])
         self.y = np.array([[1], [0], [0], [0]])

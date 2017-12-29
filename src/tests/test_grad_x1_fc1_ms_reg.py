@@ -17,11 +17,7 @@ class test_grad_x1_fc1_ms_reg(nt.NnGradTest):
 
         self.net.set_l2_loss_coeff(1)
 
-        np.random.seed(1)
-
-        self.params = wup.GradientDescentParams(0.1)
-        self.net.set_weight_update_function(self.params)
-        self.net.initialize_parameters()
+    def initialize(self):    
         self.net.layers[1].weights[0,0] = 10
     
     def set_training_example(self):

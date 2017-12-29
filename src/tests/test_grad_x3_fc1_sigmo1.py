@@ -15,12 +15,6 @@ class test_x3_fc1_sigmo1(nt.NnGradTest):
         self.layer = ld.odict["sigmoid"](1)
         self.net.add_layer(self.layer)
 
-        np.random.seed(1)
-
-        self.params = wup.GradientDescentParams(0.1)
-        self.net.set_weight_update_function(self.params)
-        self.net.initialize_parameters()
-    
     def set_training_example(self):
         self.x = np.array([[0.5]])
         self.y = np.array([[0.5]])
