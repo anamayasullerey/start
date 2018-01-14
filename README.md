@@ -8,6 +8,8 @@ After downloading the git repository for *Start*, **"start/src"** directory need
 ## 1. [MNIST digit classifier example](src/mnist/mnist_net.ipynb) 
 MNIST digit classfier example using *Start* gives a feel of the architecture of *Start*. It is recommended to follow the documentation and create a classifier in Jupyter notebook. The example, **mnist_net.py** is also checked in as python module and can be run in a shell.
 
+[Error determinism](src/mnist/error_determinism.ipynb) worksheet shows how the degree of similarity is in error cases across multiple runs of classifier.
+
 ## 2. [Start documentation](start_manual.md)
 The documentation on Start explains the featrues of the *Start*. It also covers the important functions of the API.
 
