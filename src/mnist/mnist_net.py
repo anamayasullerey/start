@@ -51,9 +51,10 @@ net.check_arch()
 net.set_l2_loss_coeff(.001)
 
 # Define weight update method
-learning_rate = wup.LearningRate(alpha=.3, decay="inverse", k=0.1)
+learning_rate = wup.LearningRate(alpha=.3)
 params = wup.GradientDescentParams(learning_rate)
 # params = wup.MomentumParams(learning_rate)
+# learning_rate = wup.LearningRate(alpha=.01)
 # params = wup.AdamParams(learning_rate)
 net.set_weight_update_function(params)
 
